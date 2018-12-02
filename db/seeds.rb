@@ -192,3 +192,17 @@ dee_yan_key.photo.attach(io: File.open("#{tmp_dir}/seed_files/dee_yan_key.jpg"),
      
     antares, = aldebaran.songs.create(title: "Antares", played_count: Random.rand(1000))
     antares.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/antares.mp3"), filename: "antares.mp3")
+    
+    
+# KING IMAGINE
+king_imagine = Artist.create(name: "King Imagine")
+king_imagine.photo.attach(io: File.open("#{tmp_dir}/seed_files/king_imagine.jpg"), filename: "king_imagine.jpg")
+    
+    # ÁLBUM - INSIDE
+    inside = king_imagine.albums.create(title: "Inside",  date: Time.strptime("30/09/2012", "%d/%m/%Y"), category: jazz)
+    inside.cover.attach(io: File.open("#{tmp_dir}/seed_files/inside.jpg"), filename: "inside.jpg")
+     
+    ivy = inside.songs.create(title: "Ivy", played_count: Random.rand(1000))
+    ivy.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/ivy.mp3"), filename: "ivy.mp3")
+    escape = inside.songs.create(title: "Escape", played_count: Random.rand(1000))
+    escape.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/escape.mp3"), filename: "escape.mp3")
