@@ -58,3 +58,14 @@ andrew_howes.photo.attach(io: File.open("#{tmp_dir}/seed_files/andrew_howes.jpg"
 # YELLOW CHAIR
 yellow_chair = Artist.create(name: "Yellow Chair")
 yellow_chair.photo.attach(io: File.open("#{tmp_dir}/seed_files/yellow_chair.jpg"), filename: "yellow_chair.jpg")
+
+    # ÁLBUM - BARCELONA
+    barcelona = yellow_chair.albums.create(title: "Barcelona", date: Time.strptime("07/01/2008", "%d/%m/%Y"), category: rock)
+    barcelona.cover.attach(io: File.open("#{tmp_dir}/seed_files/barcelona.jpg"), filename: "barcelona.jpg")
+     
+    via_laietana = barcelona.songs.create(title: "Via Laietana", played_count: Random.rand(1000))
+    via_laietana.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/via_laietana.mp3"), filename: "via_laietana.mp3")
+    passeig_de_gracia = barcelona.songs.create(title: "Passeig de Gràcia", played_count: Random.rand(1000))
+    passeig_de_gracia.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/passeig_de_gracia.mp3"), filename: "passeig_de_gracia.mp3")
+    itaca = barcelona.songs.create(title: "Itaca", played_count: Random.rand(1000))
+    itaca.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/itaca.mp3"), filename: "itaca.mp3")
