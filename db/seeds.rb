@@ -104,7 +104,6 @@ waylon_thornton.photo.attach(io: File.open("#{tmp_dir}/seed_files/waylon_thornto
     
 
 # BREAK THE BANS
- 
 break_the_bans = Artist.create(name: "Break the Bans")
 break_the_bans.photo.attach(io: File.open("#{tmp_dir}/seed_files/break_the_bans.jpg"), filename: "break_the_bans.jpg")
 
@@ -117,7 +116,6 @@ break_the_bans.photo.attach(io: File.open("#{tmp_dir}/seed_files/break_the_bans.
     
 
 # CULLAH
- 
 cullah = Artist.create(name: "Cullah")
 cullah.photo.attach(io: File.open("#{tmp_dir}/seed_files/cullah.jpg"), filename: "cullah.jpg")
 
@@ -140,3 +138,23 @@ cullah.photo.attach(io: File.open("#{tmp_dir}/seed_files/cullah.jpg"), filename:
     freed_from_greed.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/freed_from_greed.mp3"), filename: "freed_from_greed.mp3")
     aisling = trinity.songs.create(title: "Aisling", played_count: Random.rand(1000))
     aisling.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/aisling.mp3"), filename: "aisling.mp3")
+    
+    
+# HANDMADE MOMENTS
+handmade_moments = Artist.create(name: "Handmade Moments")
+handmade_moments.photo.attach(io: File.open("#{tmp_dir}/seed_files/handmade_moments.jpg"), filename: "handmade_moments.jpg")
+    
+    # ÁLBUM - PAW PAW TREE
+    paw_paw_tree = handmade_moments.albums.create(title: "Paw Paw Tree", date: Time.strptime("29/07/2013", "%d/%m/%Y"), category: country)
+    paw_paw_tree.cover.attach(io: File.open("#{tmp_dir}/seed_files/paw_paw_tree.jpg"), filename: "paw_paw_tree.jpg")
+     
+    junkie = paw_paw_tree.songs.create(title: "Junkie", played_count: Random.rand(1000))
+    junkie.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/junkie.mp3"), filename: "junkie.mp3")
+    fighting_a_mountain = paw_paw_tree.songs.create(title: "Fighting a Mountain", played_count: Random.rand(1000))
+    fighting_a_mountain.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/fighting_a_mountain.mp3"), filename: "fighting_a_mountain.mp3")
+    wanderin_eyes = paw_paw_tree.songs.create(title: "Wanderin' Eyes", played_count: Random.rand(1000))
+    wanderin_eyes.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/wanderin_eyes.mp3"), filename: "wanderin_eyes.mp3")
+    human_hands = paw_paw_tree.songs.create(title: "Human Hands", played_count: Random.rand(1000))
+    human_hands.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/human_hands.mp3"), filename: "human_hands.mp3")
+    coffee_chocolate_earth = paw_paw_tree.songs.create(title: "Coffee, Chocolate, Earth", played_count: Random.rand(1000))
+    coffee_chocolate_earth.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/coffee_chocolate_earth.mp3"), filename: "coffee_chocolate_earth.mp3")
