@@ -23,7 +23,7 @@ jazz.image.attach(io: File.open("#{tmp_dir}/seed_files/jazz.png"), filename: "ja
 
 
 #============================
-# ARTISTAS, ÁLBUNS, MÚSICAS
+# ARTISTAS, ÁLBUNS + MÚSICAS
 #============================
 
 # ANDREW HOWS
@@ -108,9 +108,35 @@ waylon_thornton.photo.attach(io: File.open("#{tmp_dir}/seed_files/waylon_thornto
 break_the_bans = Artist.create(name: "Break the Bans")
 break_the_bans.photo.attach(io: File.open("#{tmp_dir}/seed_files/break_the_bans.jpg"), filename: "break_the_bans.jpg")
 
-    # ÁLBUM - MYSTERY CLUB
+    # ÁLBUM - COVERS & B-SIDES
     covers_besides = break_the_bans.albums.create(title: "Covers & B-sides", date: Time.strptime("29/07/2013", "%d/%m/%Y"), category: blues)
     covers_besides.cover.attach(io: File.open("#{tmp_dir}/seed_files/covers_besides.jpg"), filename: "covers_besides.jpg")
     
     how_can_i_love_her = covers_besides.songs.create(title: "How can I love her", played_count: Random.rand(1000))
     how_can_i_love_her.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/how_can_i_love_her.mp3"), filename: "how_can_i_love_her.mp3")
+    
+
+# CULLAH
+ 
+cullah = Artist.create(name: "Cullah")
+cullah.photo.attach(io: File.open("#{tmp_dir}/seed_files/cullah.jpg"), filename: "cullah.jpg")
+
+    # ÁLBUM - BE LOVE NOT FEAR
+    be_love_not_fear = cullah.albums.create(title: "Be Love Not Fear", date: Time.strptime("29/07/2013", "%d/%m/%Y"), category: blues)
+    be_love_not_fear.cover.attach(io: File.open("#{tmp_dir}/seed_files/be_love_not_fear.jpg"), filename: "be_love_not_fear.jpg")
+     
+    save_my_soul = be_love_not_fear.songs.create(title: "Save my Soul", played_count: Random.rand(1000))
+    save_my_soul.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/save_my_soul.mp3"), filename: "save_my_soul.mp3")
+    who_am_i = be_love_not_fear.songs.create(title: "Who am I?", played_count: Random.rand(1000))
+    who_am_i.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/who_am_i.mp3"), filename: "who_am_i.mp3")
+    jane_the_ripper = be_love_not_fear.songs.create(title: "Jane the Ripper", played_count: Random.rand(1000))
+    jane_the_ripper.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/jane_the_ripper.mp3"), filename: "jane_the_ripper.mp3")
+     
+    # ÁLBUM - TRINITY
+    trinity = cullah.albums.create(title: "Trinity", date: Time.strptime("27/04/2016", "%d/%m/%Y"), category: blues)
+    trinity.cover.attach(io: File.open("#{tmp_dir}/seed_files/trinity.jpg"), filename: "trinity.jpg")
+     
+    freed_from_greed = trinity.songs.create(title: "Freed from Greed", played_count: Random.rand(1000))
+    freed_from_greed.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/freed_from_greed.mp3"), filename: "freed_from_greed.mp3")
+    aisling = trinity.songs.create(title: "Aisling", played_count: Random.rand(1000))
+    aisling.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/aisling.mp3"), filename: "aisling.mp3")
