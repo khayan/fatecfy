@@ -29,3 +29,6 @@ jazz.image.attach(io: File.open("#{tmp_dir}/seed_files/jazz.png"), filename: "ja
 # ANDREW HOWS
 andrew_howes = Artist.create(name: "Andrew Howes")
 andrew_howes.photo.attach(io: File.open("#{tmp_dir}/seed_files/andrew_howes.jpg"), filename: "andrew_howes.jpg")
+
+gubernator = andrew_howes.albums.create(title: "Gubernator", date: Time.strptime("18/05/2015", "%d/%m/%Y"), category: rock)
+gubernator.cover.attach(io: File.open("#{tmp_dir}/seed_files/gubernator.jpg"), filename: "gubernator.jpg")
