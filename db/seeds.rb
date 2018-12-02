@@ -158,3 +158,37 @@ handmade_moments.photo.attach(io: File.open("#{tmp_dir}/seed_files/handmade_mome
     human_hands.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/human_hands.mp3"), filename: "human_hands.mp3")
     coffee_chocolate_earth = paw_paw_tree.songs.create(title: "Coffee, Chocolate, Earth", played_count: Random.rand(1000))
     coffee_chocolate_earth.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/coffee_chocolate_earth.mp3"), filename: "coffee_chocolate_earth.mp3")
+    
+    
+# DEE YAN-KEY
+dee_yan_key = Artist.create(name: "Dee Yan-Key")
+dee_yan_key.photo.attach(io: File.open("#{tmp_dir}/seed_files/dee_yan_key.jpg"), filename: "dee_yan_key.jpg")
+    
+    # ÁLBUM - YEARS AND YEARS AGO
+    years_and_years_ago = dee_yan_key.albums.create(title: "Years and Years Ago",  date: Time.strptime("17/05/2011", "%d/%m/%Y"), category: jazz)
+    years_and_years_ago.cover.attach(io: File.open("#{tmp_dir}/seed_files/years_and_years_ago.jpg"), filename: "years_and_years_ago.jpg")
+     
+    lazy = years_and_years_ago.songs.create(title: "Lazy", played_count: Random.rand(1000))
+    lazy.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/lazy.mp3"), filename: "lazy.mp3")
+    snow = years_and_years_ago.songs.create(title: "Snow", played_count: Random.rand(1000))
+    snow.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/snow.mp3"), filename: "snow.mp3")
+    grief = years_and_years_ago.songs.create(title: "Grief", played_count: Random.rand(1000))
+    grief.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/grief.mp3"), filename: "grief.mp3")
+    clowns = years_and_years_ago.songs.create(title: "Clowns", played_count: Random.rand(1000))
+    clowns.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/clowns.mp3"), filename: "clowns.mp3")
+     
+    # ÁLBUM - A MAN'S LIFE
+    mans_life = dee_yan_key.albums.create(title: "A Man's Life",  date: Time.strptime("17/09/2012", "%d/%m/%Y"), category: jazz)
+    mans_life.cover.attach(io: File.open("#{tmp_dir}/seed_files/mans_life.jpg"), filename: "mans_life.jpg")
+     
+    life = mans_life.songs.create(title: "Life", played_count: Random.rand(1000))
+    life.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/life.mp3"), filename: "life.mp3")
+    death_redemption = mans_life.songs.create(title: "Death & Redemption", played_count: Random.rand(1000))
+    death_redemption.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/death_redemption.mp3"), filename: "death_redemption.mp3")
+     
+    # ÁLBUM - ALDEBARAN
+    aldebaran = dee_yan_key.albums.create(title: "Aldebaran",  date: Time.strptime("30/01/2012", "%d/%m/%Y"), category: jazz)
+    aldebaran.cover.attach(io: File.open("#{tmp_dir}/seed_files/aldebaran.jpg"), filename: "aldebaran.jpg")
+     
+    antares, = aldebaran.songs.create(title: "Antares", played_count: Random.rand(1000))
+    antares.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/antares.mp3"), filename: "antares.mp3")
