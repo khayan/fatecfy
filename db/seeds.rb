@@ -76,3 +76,12 @@ yellow_chair.photo.attach(io: File.open("#{tmp_dir}/seed_files/yellow_chair.jpg"
      
     everything_zen_music = everything_zen.songs.create(title: "Everything Zen", played_count: Random.rand(1000))
     everything_zen_music.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/everything_zen.mp3"), filename: "everything_zen.mp3")
+    
+    # ÁLBUM - MENG JIA
+    meng_jia = yellow_chair.albums.create(title: "Meng Jia", date: Time.strptime("07/03/2014", "%d/%m/%Y"), category: rock)
+    meng_jia.cover.attach(io: File.open("#{tmp_dir}/seed_files/meng_jia.jpg"), filename: "meng_jia.jpg")
+     
+    malvinas_go_go = meng_jia.songs.create(title: "Malvinas Go-Go", played_count: Random.rand(1000))
+    malvinas_go_go.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/malvinas_go_go.mp3"), filename: "malvinas_go_go.mp3")
+    coronation_pope_francis = meng_jia.songs.create(title: "Coronation of Pope Francis", played_count: Random.rand(1000))
+    coronation_pope_francis.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/coronation_pope_francis.mp3"), filename: "coronation_pope_francis.mp3")
