@@ -69,3 +69,10 @@ yellow_chair.photo.attach(io: File.open("#{tmp_dir}/seed_files/yellow_chair.jpg"
     passeig_de_gracia.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/passeig_de_gracia.mp3"), filename: "passeig_de_gracia.mp3")
     itaca = barcelona.songs.create(title: "Itaca", played_count: Random.rand(1000))
     itaca.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/itaca.mp3"), filename: "itaca.mp3")
+        
+    # ÁLBUM - EVERYTHING ZEN
+    everything_zen = yellow_chair.albums.create(title: "Everything Zen", date: Time.strptime("01/07/2013", "%d/%m/%Y"), category: rock)
+    everything_zen.cover.attach(io: File.open("#{tmp_dir}/seed_files/everything_zen.jpg"), filename: "everything_zen.jpg")
+     
+    everything_zen_music = everything_zen.songs.create(title: "Everything Zen", played_count: Random.rand(1000))
+    everything_zen_music.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/everything_zen.mp3"), filename: "everything_zen.mp3")
