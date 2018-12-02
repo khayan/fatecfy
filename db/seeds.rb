@@ -206,3 +206,18 @@ king_imagine.photo.attach(io: File.open("#{tmp_dir}/seed_files/king_imagine.jpg"
     ivy.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/ivy.mp3"), filename: "ivy.mp3")
     escape = inside.songs.create(title: "Escape", played_count: Random.rand(1000))
     escape.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/escape.mp3"), filename: "escape.mp3")
+    
+
+#========================
+# USUÁRIOS
+#========================
+
+teste1 = User.create(name: "Khayan Malantrucco", email: "khayan@uol.com.br", password: "123456", password_confirmation: "123456")
+teste1.favorites.create(favoritable: trinity)
+teste1.favorites.create(favoritable: paw_paw_tree)
+teste1.favorites.create(favoritable: everything_zen)
+teste1.favorites.create(favoritable: gubernator)
+teste1.recently_heards.create(album: inside)
+teste1.recently_heards.create(album: trinity)
+teste1.recently_heards.create(album: gubernator)
+teste1.recently_heards.create(album: the_great_bear)
