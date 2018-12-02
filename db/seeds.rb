@@ -1,13 +1,13 @@
-#========================
-# MÚSICAS
-#========================
+#============================
+# SONGS
+#============================
 
 # Para evitar a repetição do comando no código inserimos em uma variável.
 tmp_dir = Rails.root.join("tmp")
 
-#========================
+#============================
 # CATEGORIAS
-#========================
+#============================
  
 rock = Category.create(name: "Rock")
 rock.image.attach(io: File.open("#{tmp_dir}/seed_files/rock.png"), filename: "rock.png")
@@ -20,3 +20,12 @@ country.image.attach(io: File.open("#{tmp_dir}/seed_files/country.png"), filenam
 
 jazz = Category.create(name: "Jazz")
 jazz.image.attach(io: File.open("#{tmp_dir}/seed_files/jazz.png"), filename: "jazz.png")
+
+
+#============================
+# ARTISTAS, ÁLBUNS, MÚSICAS
+#============================
+
+# ANDREW HOWS
+andrew_howes = Artist.create(name: "Andrew Howes")
+andrew_howes.photo.attach(io: File.open("#{tmp_dir}/seed_files/andrew_howes.jpg"), filename: "andrew_howes.jpg")
