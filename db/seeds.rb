@@ -53,3 +53,8 @@ andrew_howes.photo.attach(io: File.open("#{tmp_dir}/seed_files/andrew_howes.jpg"
     four_am.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/4_am.mp3"), filename: "4_am.mp3")
     waiting = the_great_bear.songs.create(title: "Waiting", played_count: Random.rand(1000))
     waiting.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/waiting.mp3"), filename: "waiting.mp3")
+    
+
+# YELLOW CHAIR
+yellow_chair = Artist.create(name: "Yellow Chair")
+yellow_chair.photo.attach(io: File.open("#{tmp_dir}/seed_files/yellow_chair.jpg"), filename: "yellow_chair.jpg")
