@@ -101,3 +101,16 @@ waylon_thornton.photo.attach(io: File.open("#{tmp_dir}/seed_files/waylon_thornto
     very_hazel.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/very_hazel.mp3"), filename: "very_hazel.mp3")
     favorite_secrets = mystery_club.songs.create(title: "Favorite Secrets", played_count: Random.rand(1000))
     favorite_secrets.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/favorite_secrets.mp3"), filename: "favorite_secrets.mp3")
+    
+
+# BREAK THE BANS
+ 
+break_the_bans = Artist.create(name: "Break the Bans")
+break_the_bans.photo.attach(io: File.open("#{tmp_dir}/seed_files/break_the_bans.jpg"), filename: "break_the_bans.jpg")
+
+    # ÁLBUM - MYSTERY CLUB
+    covers_besides = break_the_bans.albums.create(title: "Covers & B-sides", date: Time.strptime("29/07/2013", "%d/%m/%Y"), category: blues)
+    covers_besides.cover.attach(io: File.open("#{tmp_dir}/seed_files/covers_besides.jpg"), filename: "covers_besides.jpg")
+    
+    how_can_i_love_her = covers_besides.songs.create(title: "How can I love her", played_count: Random.rand(1000))
+    how_can_i_love_her.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/how_can_i_love_her.mp3"), filename: "how_can_i_love_her.mp3")
