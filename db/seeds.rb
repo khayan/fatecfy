@@ -85,3 +85,19 @@ yellow_chair.photo.attach(io: File.open("#{tmp_dir}/seed_files/yellow_chair.jpg"
     malvinas_go_go.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/malvinas_go_go.mp3"), filename: "malvinas_go_go.mp3")
     coronation_pope_francis = meng_jia.songs.create(title: "Coronation of Pope Francis", played_count: Random.rand(1000))
     coronation_pope_francis.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/coronation_pope_francis.mp3"), filename: "coronation_pope_francis.mp3")
+    
+
+# WAYLON THORNTON
+waylon_thornton = Artist.create(name: "Waylon Thornton")
+waylon_thornton.photo.attach(io: File.open("#{tmp_dir}/seed_files/waylon_thornton.jpg"), filename: "waylon_thornton.jpg")
+ 
+    # ÁLBUM - MYSTERY CLUB
+    mystery_club = waylon_thornton.albums.create(title: "Mystery Club", date: Time.strptime("29/06/2011", "%d/%m/%Y"), category: rock)
+    mystery_club.cover.attach(io: File.open("#{tmp_dir}/seed_files/mystery_club.jpg"), filename: "mystery_club.jpg")
+     
+    wobbly_way = mystery_club.songs.create(title: "Wobbly Way", played_count: Random.rand(1000))
+    wobbly_way.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/wobbly_way.mp3"), filename: "wobbly_way.mp3")
+    very_hazel = mystery_club.songs.create(title: "Very Hazel", played_count: Random.rand(1000))
+    very_hazel.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/very_hazel.mp3"), filename: "very_hazel.mp3")
+    favorite_secrets = mystery_club.songs.create(title: "Favorite Secrets", played_count: Random.rand(1000))
+    favorite_secrets.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/favorite_secrets.mp3"), filename: "favorite_secrets.mp3")
