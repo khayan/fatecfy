@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#========================
+# MÚSICAS
+#========================
+
+# Para evitar a repetição do comando no código inserimos em uma variável.
+tmp_dir = Rails.root.join("tmp")
+
+#========================
+# CATEGORIAS
+#========================
+ 
+rock = Category.create(name: "Rock")
+rock.image.attach(io: File.open("#{tmp_dir}/seed_files/rock.png"), filename: "rock.png")
