@@ -1,0 +1,14 @@
+
+div.tabs.shared {
+  li {
+    a {
+      color: $white; /* importado do Bulma*/
+    }
+
+    &.is-active { /* Quando botão estiver ativo */
+      a {
+        color: $primary; /* verde */
+        border-bottom-color: $primary;
+      }
+    }
+  }
