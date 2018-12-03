@@ -41,4 +41,19 @@
       </div>
     </div>
   <% end %>
+  
+<!-- Conteúdo renderizado das Músicas -->  
+  <% if songs %>
+    <div id="songs" class="tab-item">
+      <div class="columns is-multiline">
+        <div class="column is-12">
+          <button id="play-all" class="button is-primary is-medium">
+            <span class="icon"><i class="fas fa-play-circle"></i></span>
+            <span>Tocar Todas</span>
+          </button>
+        </div>
+        <%= render songs %>
+      </div>
+    </div>
+  <% end %>
 </div>
