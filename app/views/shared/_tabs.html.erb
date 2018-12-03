@@ -22,3 +22,13 @@
     <% end %>
   </ul>
 </div>
+
+<!-- Conteúdo renderizado dos Álbuns -->
+<div class="tabs-content">
+  <% if albums %>
+    <div id="albums" class="tab-item active">
+      <div class="columns is-mobile is-multiline">
+        <%= render albums %>
+      </div>
+    </div>
+  <% end %>
