@@ -1,8 +1,24 @@
 <div class="tabs is-medium is-centered shared">
   <ul>
+    <!-- Categoria Álbuns na tab de search -->
     <% if albums %>
       <li class="is-active">
         <a target="#albums">Álbums</a>
       </li>
     <% end %>
+    
+    <!-- Categoria Artistas na tab de search -->
+    <% if artists %>
+      <li>
+        <a target="#artists">Artistas</a>
+      </li>
+    <% end %>
+ 
+    <!-- Categoria Músicas na tab de search -->
+    <% if songs %>
+      <li>
+        <a target="#songs">Músicas</a>
+      </li>
+    <% end %>
+  </ul>
 </div>
