@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :search, only: [:index, :new], as: :searches
     resources :categories, only: :show
     resources :artists, only: :show
+    resources :favorites, only: :index
     resources :albums, only: :show do
       resources :recently_heards, only: :create
     end
